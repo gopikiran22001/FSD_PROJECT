@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i>PVPSIT</i></div>
+            <div class="search">
+                <div id="search-bar" class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input id="search-input" type="text" placeholder="Search for Products, Brands and More" autocomplete="off">
+                </div>
+                <div id="search_menu" class="search_menu"></div>
+            </div>
+            <div class="nav-links">
+                <div class="login-profile" id="login-profile">
+                    <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+                    <span>Login</span>
+                </div>
+                <div class="profile">
+                    <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+                    <span id="profile-name"></span>
+                </div>
+                <a href=""><img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24"><span>Cart</span></a>
+                <img id="three-dots" src="Tool/header_3verticalDots-ea7819.svg" alt="" width="24" height="24">
+                <div id="three-dots-menu">
+                    <div id="profile-check" class="three-dots-items">
+                        <img src="Tool/profile-52e0dc.svg" alt=""> My Profile
+                    </div>
+                    <div id="orders" class="three-dots-items">
+                        <img src="Tool/orders-bfe8c4.svg" alt="">Orders
+                    </div>
+                    <div id="wishlist" class="three-dots-items">
+                        <img src="Tool/sishlist.svg" alt=""> Wishlist
+                    </div>
+                    <div id="logout" class="three-dots-items">
+                        <img src="Tool/logout-e63ddf.svg" alt="">Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="log-pad" id="log-pad">
+        <div class="sign-In" id="sign-In">
+            <div class="slash">
+                <i id="signUp-btn"><b>SignUp</b></i>
+            </div>
+            <div class="sign-form">
+                <button id="exit-btn1">X</button>
+                <form action="" id="signInForm">
+                    <b>Welcome Back!</b>
+                    <input autocomplete="off" type="email" name="" id="login-email" placeholder="Mail">
+                    <input autocomplete="off" type="password" name="" id="login-password" placeholder="Password" >
+                    <a href="#">Forgot Password?</a>
+                    <input autocomplete="off" type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+        <div class="sign-Up" id="sign-Up">
+            <div class="signUp-form">
+                <button id="exit-btn2">X</button>
+                <form action="" id="signupForm">
+                    <b style="font-size: 2rem;">Create Account</b>
+                    <input autocomplete="off" type="text" id="firstName" placeholder="First Name" required>
+                    <input autocomplete="off" type="text" id="lastName" placeholder="Last Name" required>
+                    <input autocomplete="off" type="date" id="dob" required>
+                    
+                    <div class="radio">
+                        <input type="radio" name="gender" id="male" value="Male" checked>Male
+                        <input type="radio" name="gender" id="female" value="Female">Female
+                        <input type="radio" name="gender" id="other" value="Other">Other
+                    </div>
+                    <textarea autocomplete="off" placeholder="Address" name="" id="address" required></textarea>
+                    <input autocomplete="off" type="number" id="mobile" placeholder="Mobile Number" required>
+                    <input autocomplete="off" type="email" id="email" placeholder="Mail" required>
+                    <input autocomplete="off" type="password" id="password" placeholder="Password" required>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="slash">
+                <i><b id="signIn-btn" style="font-size: 1rem;">SignIn</b></i>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <button id="btn">click</button>
+    <div class="loader-background">
+        <div class="loader"></div>
+    </div>
+    
+    <script type="module" src="Scripts/index.js"></script>
+</body>
+</html>
