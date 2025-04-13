@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful Web Quiz</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to right, #fdfbfb, #ebedee);
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        padding: 20px 0;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .button-primary {
+        background-color: #00bcd4;
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block;
+        margin: 20px auto;
+      }
+
+      .button-primary:hover {
+        background-color: #0097a7;
+      }
+
+      .question {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 6px solid #333;
+      }
+
+      .question p {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .question label {
+        display: block;
+        margin-bottom: 8px;
+        cursor: pointer;
+        padding-left: 10px;
+      }
+
+      .user-info {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f0f0f0;
+        border-left: 6px solid #00bcd4;
+        border-radius: 10px;
+      }
+
+      .user-info label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .user-info input {
+        padding: 8px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+
+      .result {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #4caf50;
+        margin-top: 30px;
+      }
+
+      #quiz-container {
+        display: none;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          margin: 10px;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>🌟 Web Development Quiz 🌟</header>
+
+    <div class="container">
+      <button class="button-primary" onclick="openQuiz()">Open Quiz</button>
+
+      <div id="quiz-container">
+        <form id="quiz-form">
+          <div class="user-info">
+            <label>👤 Name:</label>
+            <input type="text" name="username" required />
+
+            <label>🧾 Roll Number:</label>
+            <input type="text" name="roll" required />
+
+            <label>🏫 Branch:</label>
+            <input type="text" name="branch" required />
+
+            <label>📧 Gmail:</label>
+            <input type="email" name="gmail" required />
+          </div>
+        </form>
+
+        <div id="questions-container"></div>
+
+        <button class="button-primary" onclick="checkAnswers()">Submit</button>
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          q: "What does HTML stand for?",
+          options: [
+            "Hyper Text Markup Language",
+            "Hyper Text Machine Language",
+            "High Text Markup Language",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Which property is used to change the background color in CSS?",
+          options: ["color", "bgcolor", "background-color"],
+          answer: 2,
+        },
+        {
+          q: "What does CSS stand for?",
+          options: [
+            "Computer Style Sheets",
+            "Cascading Style Sheets",
+            "Creative Style Sheets",
+          ],
+          answer: 1,
+        },
+        {
+          q: "How do you select an element with id 'demo'?",
+          options: ["#demo", ".demo", "demo"],
+          answer: 0,
+        },
+        {
+          q: "How do you write a comment in CSS?",
+          options: ["// comment", "<!-- comment -->", "/* comment */"],
+          answer: 2,
+        },
+        {
+          q: "Which class makes a button green in Bootstrap?",
+          options: [".btn-success", ".btn-green", ".btn-primary-green"],
+          answer: 0,
+        },
+        {
+          q: "Which Bootstrap class is used for a responsive container?",
+          options: [".container-fixed", ".container-responsive", ".container"],
+          answer: 2,
+        },
+        {
+          q: "Which class creates a row in Bootstrap?",
+          options: [".row", ".grid", ".line"],
+          answer: 0,
+        },
+        {
+          q: "Which JavaScript keyword declares a variable?",
+          options: ["var", "define", "int"],
+          answer: 0,
+        },
+        {
+          q: "How do you define a function in JavaScript?",
+          options: ["function myFunc()", "def myFunc()", "func myFunc()"],
+          answer: 0,
+        },
+        {
+          q: "Which method displays an alert box?",
+          options: ["msg()", "alert()", "popup()"],
+          answer: 1,
+        },
+        {
+          q: "Which event occurs when a user clicks on an HTML element?",
+          options: ["onmouseover", "onmouseclick", "onclick"],
+          answer: 2,
+        },
+        {
+          q: "What does DOM stand for?",
+          options: [
+            "Document Object Model",
+            "Data Object Model",
+            "Document Oriented Method",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Which HTML attribute is used to open a link in a new tab?",
+          options: [
+            'href="_blank"',
+            'target="_blank"',
+            'newtab="yes"',
+            'open="new"',
+          ],
+          answer: 1,
+        },
+        {
+          q: "Which attribute is used in HTML to define inline styles?",
+          options: ["class", "style", "font"],
+          answer: 1,
+        },
+        {
+          q: "Which CSS property controls the text size?",
+          options: ["font-style", "text-size", "font-size"],
+          answer: 2,
+        },
+        {
+          q: "In Bootstrap, what is the default breakpoint for mobile devices?",
+          options: ["768px", "576px", "992px"],
+          answer: 1,
+        },
+      ];
+
+      const bgColors = [
+        "#FFEBEE",
+        "#FFF8E1",
+        "#E8F5E9",
+        "#E3F2FD",
+        "#F3E5F5",
+        "#E0F7FA",
+        "#FCE4EC",
+        "#FFF3E0",
+        "#F1F8E9",
+        "#EDE7F6",
+        "#F9FBE7",
+        "#FFFDE7",
+        "#FBE9E7",
+        "#ECEFF1",
+        "#E1F5FE",
+        "#F9FBE7",
+        "#F3E5F5",
+      ];
+
+      function openQuiz() {
+        document.getElementById("quiz-container").style.display = "block";
+        const qDiv = document.getElementById("questions-container");
+        qDiv.innerHTML = "";
+
+        questions.forEach((question, index) => {
+          let qHtml = `<div class="question" style="background-color: ${
+            bgColors[index % bgColors.length]
+          }"><p>${index + 1}. ${question.q}</p>`;
+          question.options.forEach((option, i) => {
+            qHtml += `
+              <label>
+                <input type="radio" name="q${index}" value="${i}"> ${option}
+              </label>`;
+          });
+          qHtml += `</div>`;
+          qDiv.innerHTML += qHtml;
+        });
+      }
+
+      function checkAnswers() {
+        let score = 0;
+        questions.forEach((question, index) => {
+          const selected = document.querySelector(
+            input[name="q${index}"]:
+          );
+          if (selected && parseInt(selected.value) === question.answer) {
+            score++;
+          }
+        });
+
+        const form = document.getElementById("quiz-form");
+        const name = form.username.value;
+        const roll = form.roll.value;
+        const branch = form.branch.value;
+        const gmail = form.gmail.value;
+
+        if (!name || !roll || !branch || !gmail) {
+          alert(
+            "Please fill in all personal details before submitting the quiz."
+          );
+          return;
+        }
+
+        document.getElementById(
+          "result"
+        ).textContent = `🎉 ${name}, your score is ${score} out of ${questions.length}`;
+      }
+    </script>
+  </body>
+</html>

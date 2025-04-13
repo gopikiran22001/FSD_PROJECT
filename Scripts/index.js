@@ -1,5 +1,5 @@
 // const apiUrl = mongo_api;
-const apiUrl = 'https://3yo0bdyxab.execute-api.ap-south-1.amazonaws.com/MONGO';
+const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
 
 function getCookie(name) {
     const value = `; ${document.cookie}`;
@@ -8,12 +8,12 @@ function getCookie(name) {
 }
 
 class User {
-    constructor(firstName, lastName, DOB, gender, address, mail, phone, password) {
+    constructor(firstName, lastName, DOB, gender, mail, phone, password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.DOB = DOB;
         this.gender = gender;
-        this.address = [address];
+        this.address = [];
         this.mail = mail;
         this.phone = phone;
         this.password = password;
@@ -43,7 +43,7 @@ async function getField(fieldName, collection) {
 async function search_menu_mongo() {
     const jsonResponse = await fetch(apiUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({ collection: "search_menu", operation: "search_menu" })
     }).then(response => response.json());
 
@@ -107,7 +107,6 @@ async function loginUser(mail, password) {
     const body = typeof jsonResponse.body === "string"
         ? JSON.parse(jsonResponse.body)
         : jsonResponse.body;
-
     return body;
 }
 
@@ -144,6 +143,13 @@ window.onload = async function () {
         }
     }
 
+    document.getElementById("togglePassword1").addEventListener("click", function () {
+        const passwordInput = document.getElementById("login-password");
+        const type = passwordInput.type === "password" ? "text" : "password";
+        passwordInput.type = type;
+        this.classList.toggle("fa-eye-slash");
+      });
+      
     document.getElementById("signInForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         const mail = document.getElementById("login-email").value;
@@ -163,14 +169,12 @@ window.onload = async function () {
         }
         location.reload();
     });
-
     document.getElementById("signupForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         const firstName = document.getElementById("firstName").value;
         const lastName = document.getElementById("lastName").value;
         const dob = document.getElementById("dob").value;
         const gender = document.querySelector('input[name="gender"]:checked').value;
-        const address = document.getElementById("address").value;
         const mail = document.getElementById("email").value;
         const phone = document.getElementById("mobile").value;
         const password = document.getElementById("password").value;
@@ -189,7 +193,7 @@ window.onload = async function () {
             return;
         }
 
-        const user = new User(firstName, lastName, dob, gender, address, mail, phone, password);
+        const user = new User(firstName, lastName, dob, gender, mail, phone, password);
         const result = await createUser(user);
 
         if (result) {
@@ -320,8 +324,12 @@ window.onload = async function () {
         }, 500);
     });
 
-    document.getElementById("btn").addEventListener("click", async () => {
-        const field = await getField("DOB", "users");
-        console.log(field);
+    document.getElementById("profile-check").addEventListener("click", () => {
+        window.location.href = "profile.html";
     });
+
+    // document.getElementById("btn").addEventListener("click", async () => {
+    //     const field = await getField("DOB", "users");
+    //     console.log(field);
+    // });
 };

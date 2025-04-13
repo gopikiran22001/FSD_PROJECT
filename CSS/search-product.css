@@ -278,6 +278,11 @@ body::-webkit-scrollbar{
     text-decoration: none;
     color: black;
 }
+.sign-In .sign-form form i {
+    position: fixed;
+    right: 13%;
+    top:50.5%;
+}
 .sign-In .sign-form form input[type='submit'] {
     width: 80%;
     border-radius: 8px;
@@ -378,21 +383,6 @@ body::-webkit-scrollbar{
 .sign-Up .signUp-form form input[type='radio'] {
     height: 12px;
     cursor: pointer;
-}
-.sign-Up .signUp-form form textarea {
-    height:35;
-    width: 80%;
-    border-radius: 8px;
-    padding: 5px;
-    font-size: 1rem;
-    background-color: #fff;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.sign-Up .signUp-form form textarea::-webkit-scrollbar{
-    display: none;
 }
 .sign-Up .signUp-form form input[type='submit'] {
     width: 80%;

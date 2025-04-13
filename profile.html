@@ -7,6 +7,131 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="main-body">
+        <div class="side-bar">
+            <div class="name-card">
+                <img style="margin-left: 30px;" src="" alt="pic" id="profile-pic-type">
+                <div class="name">
+                    <span style="font-size: 12px;">Hello,</span>
+                    <b><span id="profile-fullName"></span></b>
+                </div>
+            </div>
+            <div class="options">
+                <div class="my-orders" id="my-orders-sidebar">
+                    <img style="margin-left: 30px;" src="Tool/my-orders.svg" alt="">
+                    <b>MY ORDERS</b>
+                </div>
+                <div class="account-settings">
+                    <div class="head">
+                        <img style="margin-left: 30px;" src="Tool/profile-blue.svg" alt="">
+                        <b>ACCOUNT SETTINGS</b>
+                    </div>
+                    <div id="profile-information" style="cursor: pointer;">Profile Information</div>
+                    <div id="manage-address" style="cursor: pointer;">Manage Addresses</div>
+                </div>
+                <div class="my-stuff">
+                    <div class="head">
+                        <img style="margin-left: 30px;" src="Tool/my-stuff.svg" alt="">
+                        <b>MY STUFF</b>
+                    </div>
+                    <div id="my-stuff-wishlist" style="cursor: pointer;">My Wishlist</div>
+                    <div id="my-stuff-cart" style="cursor: pointer;">My Cart</div>
+                </div>
+                <div id="logout-panel">
+                    <img style="margin-left: 30px;" src="Tool/logout-blue.svg" alt=""><b>Logout</b>
+                </div>
+            </div>
+        </div>
+        <div class="profile-information-panel" id="profile-information-panel">
+            <div class="normal-details">
+                <span id="form1-span"></span>
+                <form action="" id="form1">
+                    <div class="input-field">
+                        <span>FirstName</span>
+                        <input autocomplete="off" type="text" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-field">
+                        <span>LastName</span>
+                        <input autocomplete="off" type="text" id="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-field">
+                        <span>Date-of-Birth</span>
+                        <input autocomplete="off" type="date" id="dob">
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="gender" id="male" value="Male">Male
+                        <input type="radio" name="gender" id="female" value="Female">Female
+                        <input type="radio" name="gender" id="other" value="Other">Other
+                        <input id="form1-submit" type="submit" value="Update">
+                    </div>
+                </form>
+            </div>
+            <div class="mail-information">
+                
+                <form action="" >
+                    <div class="input-field">
+                        <div class="two-span">
+                            <span>Mail</span>
+                            <span id="form2-span"></span>
+                        </div>
+                        <input autocomplete="off" type="email" id="email" placeholder="Mail" required>
+                    </div>
+                    <input id="form2-submit" type="submit" value="Update">
+                </form>
+            </div>
+            <div class="phone-information">
+                <form action="" >
+                    <div class="input-field">
+                        <div class="two-span">
+                            <span>Mobile</span>
+                            <span id="form3-span"></span>
+                        </div>
+                        <input autocomplete="off" type="number" id="phone" placeholder="Phone" required>
+                    </div>
+                    <input id="form3-submit" type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+        <div class="manage-address-panel" id="manage-address-panel">
+            <label for=""><b>Manage Addresses</b></label>
+            <label id="add-address"><b>+ ADD A NEW ADDRESS</b></label>
+            <div class="form-container" id="form-container">
+                <label for="">ADD A NEW ADDRESS</label>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" name="" id="flat-no" placeholder="Flat No/House No" required>
+                        <input type="text" name="" id="apartment" placeholder="Apartment Name/House Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="" id="street-name" placeholder="Street/Road Name" required>
+                        <input type="text" name="" id="city" placeholder="Town/City/Village" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="" id="district" placeholder="District" required>
+                        <input type="text" name="" id="state" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="pincode" id="pincode" placeholder="Pincode" required>
+                        <input type="text" name="landmark" placeholder="Landmark (Optional)">
+                    </div>
+                    <div class="form-group-address-type">
+                        <label><input type="radio" name="address-type" value="home" checked> Home</label>
+                        <label><input type="radio" name="address-type" value="work"> Work</label>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Save" id="save">
+                        <input type="reset" value="Cancel" id="cancel">
+                    </div>
+                 </div>
+                 
+                </form>
+        <div class="address-list" id="address-list">
+
+        </div>
+    </div>
+    <div class="loader-background">
+        <div class="loader"></div>
+    </div>
     <script src="Scripts/profile.js"></script>
 </body>
 </html>
