@@ -327,7 +327,16 @@ window.onload = async function () {
     document.getElementById("profile-check").addEventListener("click", () => {
         window.location.href = "profile.html";
     });
-
+    document.getElementById("orders").addEventListener("click", () => {
+        window.location.href = "orders.html";
+    });
+    document.getElementById("wishlist").addEventListener("click", () => {
+        window.location.href = "wishlist.html";
+    });
+    document.getElementById("cart").addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = "cart.html";
+    });
     // document.getElementById("btn").addEventListener("click", async () => {
     //     const field = await getField("DOB", "users");
     //     console.log(field);

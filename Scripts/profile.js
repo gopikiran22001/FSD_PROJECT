@@ -317,7 +317,7 @@ window.onload= async () => {
                 curAddress.district+","}</span>
                 <span class="fullAdress2">${
                     curAddress.state+", "+
-                    curAddress.pincode+", LandMark:"+
+                    curAddress.pincode+", LandMark: "+
                     curAddress.landmark
                 }</span>
                 
