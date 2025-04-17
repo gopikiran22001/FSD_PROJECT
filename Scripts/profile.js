@@ -68,7 +68,7 @@ async function updateField(fieldName,value,mail) {
     const body = typeof jsonResponse.body === "string"
         ? JSON.parse(jsonResponse.body)
         : jsonResponse.body;
-        console.log(body);
+        // console.log(body);
     return body.message==='Field updated successfully.';
 }
 

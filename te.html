@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Import Fake Store Products</title>
+</head>
+<body>
+
+<script>
+
+  const apiUrl =  'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
+ // 🔁 Replace with your actual URL
+
+  async function importProducts() {
+    try {
+      const data = await fetch('https://fakestoreapi.com/products')
+        .then(res => res.json());
+
+      for (const product of data) {
+        // const response = await fetch(apiUrl, {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({
+        //     collection: "products",
+        //     operation: "addProduct",
+        //     product: product
+        //   })
+        // });
+
+        // const result = await response.json();
+        // console.log("Added product:", result);
+        console.log(product)
+      }
+    } catch (error) {
+      console.error("Error importing products:", error);
+    }
+  }
+
+  // Run it when page loads
+  importProducts();
+</script>
+
+</body>
+</html>

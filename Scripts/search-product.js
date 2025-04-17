@@ -23,6 +23,24 @@ class User {
     }
 }
 
+async function getProduct(value) {
+    const jsonResponse = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            collection: "products",
+            operation: "getProduct",
+            title: value
+        })
+    }).then(response => response.json());
+    // console.log(jsonResponse);
+    const parsedBody = typeof jsonResponse.body === "string"
+        ? JSON.parse(jsonResponse.body)
+        : jsonResponse.body;
+
+    return parsedBody;
+}
+
 async function getField(fieldName, collection) {
     const jsonResponse = await fetch(apiUrl, {
         method: 'POST',
@@ -338,4 +356,34 @@ window.onload = async function () {
         event.preventDefault();
         window.location.href = "cart.html";
     });
+    const loader = document.getElementsByClassName("loader-background")[0];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchValue = urlParams.get('search');
+    
+    const products=await getProduct(searchValue);
+    if(products.length==0){
+        loader.style.display = "none";
+        document.getElementById("product-container").style.display="none";
+        document.getElementById("product-not-found").style.display="flex";
+    }else{
+        loader.style.display = "none";
+        document.getElementById("product-not-found").style.display="none";
+        document.getElementById("product-container").style.display="flex";    
+        const productContainer = document.getElementById("product-container");
+        productContainer.innerHTML = "";
+        products.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product-card");
+            productDiv.innerHTML = `
+                    <img src="${product.images?product.images[0]:product.image}" alt="Product Image" class="product-image">
+                    <div class="product-info">
+                        <h3>${product.title}</h3>
+                        <p>$${product.price} <span class="discount">70% off</span></p>
+                    </div>
+            `;
+            // console.log(product.images[0]);
+            productContainer.appendChild(productDiv);
+        });
+}
 };
