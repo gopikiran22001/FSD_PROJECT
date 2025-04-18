@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/product.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Product - Modern E-Commerce</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="CSS/product.css" />
 </head>
+
 <body>
-    <script src="Scripts/product.js"></script>
+  <div class="container">
+    <div class="product-page">
+      <div class="product-gallery">
+        <div class="wishlist-icon" id="wishlist-icon"><img src="Tool/svgviewer-output.svg" alt=""></div>
+
+        <img src="" alt="Main Product Image" class="main-image" id="mainImage" />
+        <div class="thumbnail-container" id="thumbnailContainer">
+          <!-- Thumbnails will be inserted here -->
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title"></h1>
+        <div class="product-meta">
+          <span class="meta-item">
+            <i class="fas fa-star rating"></i>
+            <span></span>
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-box"></i>
+            <span></span>
+          </span>
+        </div>
+        <p class="product-price"></p>
+        <p class="product-description">
+        </p>
+
+        <div class="quantity-selector">
+          <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <input type="number" class="quantity-input" value="1" min="1" id="quantity" />
+          <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-primary" id="add-to-cart">Add to Cart</button>
+          <button class="btn btn-secondary" id="add-to-wishlist">Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-specs">
+      <h2>Product Specifications</h2>
+      <table class="specs-table">
+      </table>
+    </div>
+
+    <div class="reviews-section">
+      <h2>Customer Reviews</h2>
+      <div class="review-card">
+        <div class="review-header"><span></span><span class="rating">★★★★★</span></div>
+        <p></p>
+      </div>
+      <div class="review-card">
+        <div class="review-header"><span></span><span class="rating">★★★★☆</span></div>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-not-found" id="product-not-found">
+    <img src="Tool/8bebbce3-b7d7-42d9-8c4f-5650ad78408a.png" 
+         alt="No Products Found" 
+         style="max-width:100%; max-height:70vh; object-fit:contain;">
+  </div>
+
+  <div class="loader-background">
+    <div class="loader"></div>
+  </div>
+
+  <script src="Scripts/product.js"></script>
 </body>
+
 </html>

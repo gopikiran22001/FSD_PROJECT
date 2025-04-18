@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/cart.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/cart.css">
+  <title>Document</title>
 </head>
 <body>
-    <script src="Scripts/cart.js"></script>
+  <header>
+    <div class="navbar">
+      <div class="logo" id="logo"><i>Ekart</i></div>
+      <div class="search">
+        <div id="search-bar" class="search-bar">
+          <i class="fas fa-search"></i>
+          <input id="search-input" type="text" placeholder="Search for Products, Brands and More" autocomplete="off">
+        </div>
+        <div id="search_menu" class="search_menu"></div>
+      </div>
+      <div class="nav-links">
+        <div class="login-profile" id="login-profile">
+          <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+          <span>Login</span>
+        </div>
+        <div class="profile">
+          <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+          <span id="profile-name"></span>
+        </div>
+        <a href="" id="cart">
+          <img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24">
+          <span>Cart</span>
+        </a>
+        <img id="three-dots" src="Tool/header_3verticalDots-ea7819.svg" alt="" width="24" height="24">
+        <div id="three-dots-menu">
+          <div id="profile-check" class="three-dots-items">
+            <img src="Tool/profile-52e0dc.svg" alt=""> My Profile
+          </div>
+          <div id="orders" class="three-dots-items">
+            <img src="Tool/orders-bfe8c4.svg" alt="">Orders
+          </div>
+          <div id="wishlist" class="three-dots-items">
+            <img src="Tool/sishlist.svg" alt=""> Wishlist
+          </div>
+          <div id="logout" class="three-dots-items">
+            <img src="Tool/logout-e63ddf.svg" alt="">Logout
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart-container" id="cart-container">
+    <!-- LEFT: Cart items and saved for later -->
+    <div class="cart-left">
+      <div id="cart-items"></div>
+      <div class="place-order-btn">
+        <button class="" id="place-order-btn">PLACE ORDER</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: Price summary -->
+    <div class="cart-right">
+      <div class="cart-right-header">PRICE DETAILS</div>
+      <div class="summary">
+        <label>Items: <span id="item-count"></span></label>
+        <label>Price: <span id="total-price"></span></label>
+        <label>Discount: <span id="total-discount"></span></label>
+        <label style="border-bottom: 1px dashed #ddd;">Platform Fee: <span>$5</span></label>
+        <label style="font-weight: bold; border-bottom: 1px dashed #ddd;">Total Amount: <span id="total-amount"></span></label>
+        <label style="color: green;"><span id="total-savings" style="margin-left: 0px;"></span></label>
+      </div>
+    </div>
+  </main>
+
+  <div class="order-panel" id="order-panel">
+    <div class="panel" id="panel"></div>
+  </div>
+
+  <div class="cart-empty" id="cart-empty">
+    <img src="Tool/11329060.png" alt="">
+  </div>
+
+  <div class="loader-background">
+    <div class="loader"></div>
+  </div>
+
+  <script src="Scripts/cart.js"></script>
 </body>
 </html>

@@ -1,12 +1,19 @@
 // const apiUrl = mongo_api;
 const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
 
+// Cookie Helper
 function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+// Random Number Generator
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// User Class
 class User {
     constructor(firstName, lastName, DOB, gender, mail, phone, password) {
         this.firstName = firstName;
@@ -23,8 +30,24 @@ class User {
     }
 }
 
+// API Calls
+async function getFieldValuesByMail(fieldName, mail) {
+    const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            collection: "users",
+            operation: "getFieldValuesByMail",
+            field: fieldName,
+            mail: mail
+        })
+    });
+    const json = await response.json();
+    return typeof json.body === "string" ? JSON.parse(json.body) : json.body;
+}
+
 async function getProduct(value) {
-    const jsonResponse = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -32,68 +55,55 @@ async function getProduct(value) {
             operation: "getProduct",
             title: value
         })
-    }).then(response => response.json());
-    // console.log(jsonResponse);
-    const parsedBody = typeof jsonResponse.body === "string"
-        ? JSON.parse(jsonResponse.body)
-        : jsonResponse.body;
-
-    return parsedBody;
+    });
+    const json = await response.json();
+    return typeof json.body === "string" ? JSON.parse(json.body) : json.body;
 }
 
 async function getField(fieldName, collection) {
-    const jsonResponse = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            collection: collection,
+            collection,
             operation: "getFieldValues",
-            fieldName: fieldName
+            fieldName
         })
-    }).then(response => response.json());
-
-    const parsedBody = typeof jsonResponse.body === "string"
-        ? JSON.parse(jsonResponse.body)
-        : jsonResponse.body;
-
-    return parsedBody.map(item => Object.values(item)[0]);
+    });
+    const json = await response.json();
+    const parsed = typeof json.body === "string" ? JSON.parse(json.body) : json.body;
+    return parsed.map(item => Object.values(item)[0]);
 }
 
 async function search_menu_mongo() {
-    const jsonResponse = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ collection: "search_menu", operation: "search_menu" })
-    }).then(response => response.json());
-
-    const parsedBody = typeof jsonResponse.body === "string"
-        ? JSON.parse(jsonResponse.body)
-        : jsonResponse.body;
-
-    return parsedBody[0]?.menu || [];
+    });
+    const json = await response.json();
+    const parsed = typeof json.body === "string" ? JSON.parse(json.body) : json.body;
+    return parsed[0]?.menu || [];
 }
 
 async function userCheck(field, parameter) {
-    const jsonResponse = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             collection: "users",
             operation: "userCheck",
-            field: field,
-            parameter: parameter
+            field,
+            parameter
         })
-    }).then(response => response.json());
-
-    const parsedBody = typeof jsonResponse.body === "string"
-        ? JSON.parse(jsonResponse.body)
-        : jsonResponse.body;
-
-    return parsedBody.length > 0;
+    });
+    const json = await response.json();
+    const parsed = typeof json.body === "string" ? JSON.parse(json.body) : json.body;
+    return parsed.length > 0;
 }
 
 async function createUser(userDetails) {
-    const jsonResponse = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -101,54 +111,57 @@ async function createUser(userDetails) {
             operation: "createUser",
             user: userDetails
         })
-    }).then(response => response.json());
-
-    const body = typeof jsonResponse.body === "string"
-        ? JSON.parse(jsonResponse.body)
-        : jsonResponse.body;
-
+    });
+    const json = await response.json();
+    const body = typeof json.body === "string" ? JSON.parse(json.body) : json.body;
     console.log(body);
     return body;
 }
 
 async function loginUser(mail, password) {
-    const jsonResponse = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             collection: "users",
             operation: "loginUser",
-            mail: mail,
-            password: password
+            mail,
+            password
         })
-    }).then(response => response.json());
-
-    const body = typeof jsonResponse.body === "string"
-        ? JSON.parse(jsonResponse.body)
-        : jsonResponse.body;
-
-    return body;
+    });
+    const json = await response.json();
+    return typeof json.body === "string" ? JSON.parse(json.body) : json.body;
 }
 
 async function loginUserCheck(mail, password) {
-    const responseBody = await loginUser(mail, password);
-    if (!Array.isArray(responseBody) || responseBody.length === 0) return false;
+    const response = await loginUser(mail, password);
+    if (!Array.isArray(response) || response.length === 0) return false;
 
-    const user = responseBody[0];
+    const user = response[0];
     document.cookie = `User=${encodeURIComponent(JSON.stringify(user))}; max-age=${60 * 60 * 24 * 3}; path=/`;
     document.cookie = `Login=true; max-age=${60 * 60 * 24 * 3}; path=/`;
-
     return true;
 }
 
+// Search Product Redirection
 function searchProduct(value) {
-    if(value) {
+    if (value) {
         window.location.href = `search-product.html?search=${encodeURIComponent(value)}`;
     }
 }
 
+// On Load
 window.onload = async function () {
-    
+    const userCookie = getCookie("User");
+    let user;
+    let wishList = [];
+
+    if (getCookie('Login')) {
+        user = JSON.parse(decodeURIComponent(userCookie));
+        const list = await getFieldValuesByMail("wishlist", user.mail);
+        wishList = list.wishlist;
+    }
+
     function updateUI() {
         const userCookie = getCookie("User");
         if (getCookie("Login") && userCookie) {
@@ -162,18 +175,19 @@ window.onload = async function () {
             document.getElementById("three-dots").removeEventListener("mouseover", threeDots);
         }
     }
+
     document.getElementById("togglePassword1").addEventListener("click", function () {
         const passwordInput = document.getElementById("login-password");
         const type = passwordInput.type === "password" ? "text" : "password";
         passwordInput.type = type;
         this.classList.toggle("fa-eye-slash");
-      });
-      
+    });
+
     document.getElementById("signInForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         const mail = document.getElementById("login-email").value;
         const pass = document.getElementById("login-password").value;
-        const loader = document.getElementsByClassName("loader-background")[0];
+        const loader = document.querySelector(".loader-background");
         loader.style.display = "block";
 
         if (!await userCheck("mail", mail)) {
@@ -198,8 +212,7 @@ window.onload = async function () {
         const mail = document.getElementById("email").value;
         const phone = document.getElementById("mobile").value;
         const password = document.getElementById("password").value;
-
-        const loader = document.getElementsByClassName("loader-background")[0];
+        const loader = document.querySelector(".loader-background");
         loader.style.display = "block";
 
         if (await userCheck("mail", mail)) {
@@ -213,19 +226,14 @@ window.onload = async function () {
             return;
         }
 
-        const user = new User(firstName, lastName, dob, gender,  mail, phone, password);
-        const result = await createUser(user);
+        const newUser = new User(firstName, lastName, dob, gender, mail, phone, password);
+        const result = await createUser(newUser);
 
         if (result) {
             alert("User created successfully");
-            if (!await userCheck("mail", mail)) {
+            if (!await userCheck("mail", mail) || !await loginUserCheck(mail, password)) {
                 loader.style.display = "none";
-                alert("Invalid Mail Address");
-                return;
-            }
-            if (!await loginUserCheck(mail, password)) {
-                loader.style.display = "none";
-                alert("Invalid Password");
+                alert("Auto-login failed after signup");
                 return;
             }
             setTimeout(() => loader.style.display = "none", 500);
@@ -252,31 +260,21 @@ window.onload = async function () {
 
     searchInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-          event.preventDefault();
-        //   console.log(searchInput.value);
-            if(searchInput.value) {
+            event.preventDefault();
+            if (searchInput.value) {
                 searchProduct(searchInput.value);
             }
         }
-      });
-      
+    });
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
-        if (query.length === 0) {
-            dropdown.innerHTML = "";
-            dropdown.style.display = "none";
-            return;
-        }
+        dropdown.style.display = query ? "block" : "none";
+        dropdown.innerHTML = "";
 
-        const suggestions = search_menu.filter(item =>
-            item.toLowerCase().includes(query)
-        ).slice(0, 20);
-
-        if (suggestions.length > 0) {
+        const suggestions = search_menu.filter(item => item.toLowerCase().includes(query)).slice(0, 20);
+        if (suggestions.length) {
             dropdown.innerHTML = suggestions.map(item => `<div class="dropdown-item">${item}</div>`).join("");
-            dropdown.style.display = "block";
-
             document.querySelectorAll(".dropdown-item").forEach(item => {
                 item.addEventListener("click", function () {
                     searchInput.value = this.textContent;
@@ -285,11 +283,9 @@ window.onload = async function () {
                     searchProduct(this.textContent);
                 });
             });
-        } else {
-            dropdown.innerHTML = "";
-            dropdown.style.display = "none";
         }
     });
+
     function threeDots() {
         document.getElementById("three-dots-menu").style.display = "flex";
     }
@@ -306,7 +302,7 @@ window.onload = async function () {
         document.getElementById("three-dots-menu").style.display = "none";
     });
 
-    dropdown.addEventListener("mousedown", (event) => event.preventDefault());
+    dropdown.addEventListener("mousedown", e => e.preventDefault());
     searchInput.addEventListener("blur", () => dropdown.style.display = "none");
 
     document.getElementById("login-profile").addEventListener("click", () => {
@@ -334,7 +330,7 @@ window.onload = async function () {
     });
 
     document.getElementById("logout").addEventListener("click", () => {
-        const loader = document.getElementsByClassName("loader-background")[0];
+        const loader = document.querySelector(".loader-background");
         loader.style.display = "block";
         setTimeout(() => {
             document.cookie = "Login=; max-age=0; path=/";
@@ -343,47 +339,61 @@ window.onload = async function () {
             location.reload();
         }, 500);
     });
-    document.getElementById("profile-check").addEventListener("click", () => {
-        window.location.href = "profile.html";
-    });
-    document.getElementById("orders").addEventListener("click", () => {
-        window.location.href = "orders.html";
-    });
-    document.getElementById("wishlist").addEventListener("click", () => {
-        window.location.href = "wishlist.html";
-    });
-    document.getElementById("cart").addEventListener("click", (event) => {
-        event.preventDefault();
+
+    document.getElementById("profile-check").addEventListener("click", () => window.location.href = "profile.html");
+    document.getElementById("orders").addEventListener("click", () => window.location.href = "orders.html");
+    document.getElementById("wishlist").addEventListener("click", () => window.location.href = "wishlist.html");
+    document.getElementById("cart").addEventListener("click", (e) => {
+        e.preventDefault();
         window.location.href = "cart.html";
     });
-    const loader = document.getElementsByClassName("loader-background")[0];
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const searchValue = urlParams.get('search');
-    
-    const products=await getProduct(searchValue);
-    if(products.length==0){
+    const loader = document.querySelector(".loader-background");
+    const searchValue = new URLSearchParams(window.location.search).get('search');
+    const products = await getProduct(searchValue);
+
+    if (products.length === 0) {
         loader.style.display = "none";
-        document.getElementById("product-container").style.display="none";
-        document.getElementById("product-not-found").style.display="flex";
-    }else{
+        document.getElementById("product-container").style.display = "none";
+        document.getElementById("product-not-found").style.display = "flex";
+    } else {
         loader.style.display = "none";
-        document.getElementById("product-not-found").style.display="none";
-        document.getElementById("product-container").style.display="flex";    
+        document.getElementById("product-not-found").style.display = "none";
         const productContainer = document.getElementById("product-container");
+        productContainer.style.display = "flex";
         productContainer.innerHTML = "";
+
         products.forEach(product => {
+            const random = getRandomNumber(1, 30);
+            const wishlist_svg = wishList.some(w => w.title === product.title)
+                ? 'Tool/svgviewer-output.svg'
+                : 'Tool/sishlist.svg';
+
             const productDiv = document.createElement("div");
             productDiv.classList.add("product-card");
             productDiv.innerHTML = `
-                    <img src="${product.images?product.images[0]:product.image}" alt="Product Image" class="product-image">
-                    <div class="product-info">
-                        <h3>${product.title}</h3>
-                        <p>$${product.price} <span class="discount">70% off</span></p>
-                    </div>
+                <img src="${wishlist_svg}" alt="" class="wish_button">
+                <img src="${product.images ? product.images[0] : product.image}" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <h3>${product.title}</h3>
+                    <p><label>$${(((random / 100) * product.price) + product.price).toFixed(2)}</label>
+                    $${product.price} <span class="discount">${random}% off</span></p>
+                </div>
             `;
-            // console.log(product.images[0]);
             productContainer.appendChild(productDiv);
         });
-}
+
+        document.querySelectorAll(".product-card").forEach(product => {
+            product.addEventListener("click", () => {
+                const title = product.querySelector("h3")?.innerText;
+                if (title) {
+                    window.location.href = `product.html?title=${encodeURIComponent(title)}`;
+                }
+            });
+        });
+
+        document.getElementById("logo").addEventListener("click", () => {
+            window.location.href = 'index.html';
+        });
+    }
 };

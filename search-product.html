@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><i>Ekart</i></div>
+            <div class="logo" id="logo"><i>Ekart</i></div>
             <div class="search">
                 <div id="search-bar" class="search-bar">
                     <i class="fas fa-search"></i>
@@ -27,7 +27,10 @@
                     <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
                     <span id="profile-name"></span>
                 </div>
-                <a href="" id="cart"><img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24"><span>Cart</span></a>
+                <a href="" id="cart">
+                    <img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24">
+                    <span>Cart</span>
+                </a>
                 <img id="three-dots" src="Tool/header_3verticalDots-ea7819.svg" alt="" width="24" height="24">
                 <div id="three-dots-menu">
                     <div id="profile-check" class="three-dots-items">
@@ -46,6 +49,7 @@
             </div>
         </div>
     </header>
+
     <div class="log-pad" id="log-pad">
         <div class="sign-In" id="sign-In">
             <div class="slash">
@@ -56,13 +60,14 @@
                 <form action="" id="signInForm">
                     <b>Welcome Back!</b>
                     <input autocomplete="off" type="email" name="" id="login-email" placeholder="Mail">
-                    <input autocomplete="off" type="password" name="" id="login-password" placeholder="Password" >
+                    <input autocomplete="off" type="password" name="" id="login-password" placeholder="Password">
                     <i id="togglePassword1" class="fa fa-eye" style="cursor:pointer"></i>
                     <a href="#">Forgot Password?</a>
                     <input autocomplete="off" type="submit" value="Login">
                 </form>
             </div>
         </div>
+
         <div class="sign-Up" id="sign-Up">
             <div class="signUp-form">
                 <button id="exit-btn2">X</button>
@@ -71,7 +76,7 @@
                     <input autocomplete="off" type="text" id="firstName" placeholder="First Name" required>
                     <input autocomplete="off" type="text" id="lastName" placeholder="Last Name" required>
                     <input autocomplete="off" type="date" id="dob" required>
-                    
+
                     <div class="radio">
                         <input type="radio" name="gender" id="male" value="Male" checked>Male
                         <input type="radio" name="gender" id="female" value="Female">Female
@@ -80,7 +85,7 @@
                     <input autocomplete="off" type="number" id="mobile" placeholder="Mobile Number" required>
                     <input autocomplete="off" type="email" id="email" placeholder="Mail" required>
                     <input autocomplete="off" type="password" id="password" placeholder="Password" required>
-                    
+
                     <input type="submit" value="Submit">
                 </form>
             </div>
@@ -89,97 +94,21 @@
             </div>
         </div>
     </div>
+
     <div class="product-not-found" id="product-not-found">
         <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" 
-             alt="No Products Found" 
-             style="max-width:100%; max-height:70vh; object-fit:contain;">
-      </div>
-    <div class="product-container" id="product-container">
-
-        <!-- <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="Tool/ChatGPT Image Apr 14, 2025, 01_23_02 PM.png" alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h3>VeBNor Men Regular Fit Checkered Shirt</h3>
-                <p>₹297 <span class="discount">70% off</span></p>
-            </div>
-        </div> -->
-        
+            alt="No Products Found" 
+            style="max-width:100%; max-height:70vh; object-fit:contain;">
     </div>
-    
+
+    <div class="product-container" id="product-container">
+        <!-- Product cards go here -->
+    </div>
+
     <div class="loader-background">
         <div class="loader"></div>
     </div>    
+
     <script src="Scripts/search-product.js"></script>
 </body>
 </html>

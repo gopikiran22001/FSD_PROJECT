@@ -142,7 +142,6 @@ window.onload = async function () {
             document.getElementById("three-dots").removeEventListener("mouseover", threeDots);
         }
     }
-
     document.getElementById("togglePassword1").addEventListener("click", function () {
         const passwordInput = document.getElementById("login-password");
         const type = passwordInput.type === "password" ? "text" : "password";
