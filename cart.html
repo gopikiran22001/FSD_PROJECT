@@ -1,186 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="logo"><i>EKart</i></div>
-            <div class="search">
-                <div id="search-bar" class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input id="search-input" type="text" placeholder="Search for Products, Brands and More" autocomplete="off">
-                </div>
-                <div id="search_menu" class="search_menu"></div>
-            </div>
-            <div class="nav-links">
-                <div class="login-profile" id="login-profile">
-                    <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
-                    <span>Login</span>
-                </div>
-                <div class="profile">
-                    <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
-                    <span id="profile-name"></span>
-                </div>
-                <a href="" id="cart"><img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24"><span>Cart</span></a>
-                <img id="three-dots" src="Tool/header_3verticalDots-ea7819.svg" alt="" width="24" height="24">
-                <div id="three-dots-menu">
-                    <div id="profile-check" class="three-dots-items">
-                        <img src="Tool/profile-52e0dc.svg" alt=""> My Profile
-                    </div>
-                    <div id="orders" class="three-dots-items">
-                        <img src="Tool/orders-bfe8c4.svg" alt="">Orders
-                    </div>
-                    <div id="wishlist" class="three-dots-items">
-                        <img src="Tool/sishlist.svg" alt=""> Wishlist
-                    </div>
-                    <div id="logout" class="three-dots-items">
-                        <img src="Tool/logout-e63ddf.svg" alt="">Logout
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="log-pad" id="log-pad">
-        <div class="sign-In" id="sign-In">
-            <div class="slash">
-                <i id="signUp-btn"><b>SignUp</b></i>
-            </div>
-            <div class="sign-form">
-                <button id="exit-btn1">X</button>
-                <form action="" id="signInForm">
-                    <b>Welcome Back!</b>
-                    <input autocomplete="off" type="email" name="" id="login-email" placeholder="Mail">
-                    <input autocomplete="off" type="password" name="" id="login-password" placeholder="Password" >
-                    <i id="togglePassword1" class="fa fa-eye" style="cursor:pointer"></i>
-                    <a href="#">Forgot Password?</a>
-                    <input autocomplete="off" type="submit" value="Login">
-                </form>
-            </div>
-        </div>
-        <div class="sign-Up" id="sign-Up">
-            <div class="signUp-form">
-                <button id="exit-btn2">X</button>
-                <form action="" id="signupForm">
-                    <b style="font-size: 2rem;">Create Account</b>
-                    <input autocomplete="off" type="text" id="firstName" placeholder="First Name" required>
-                    <input autocomplete="off" type="text" id="lastName" placeholder="Last Name" required>
-                    <input autocomplete="off" type="date" id="dob" required>
-                    
-                    <div class="radio">
-                        <input type="radio" name="gender" id="male" value="Male" checked>Male
-                        <input type="radio" name="gender" id="female" value="Female">Female
-                        <input type="radio" name="gender" id="other" value="Other">Other
-                    </div>
-                    <input autocomplete="off" type="number" id="mobile" placeholder="Mobile Number" required>
-                    <input autocomplete="off" type="email" id="email" placeholder="Mail" required>
-                    <input autocomplete="off" type="password" id="password" placeholder="Password" required>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            <div class="slash">
-                <i><b id="signIn-btn" style="font-size: 1rem;">SignIn</b></i>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="category-nav">
-            <div class="category-item">
-              <a href="search-product.html?search=Cooking%20Oil"><img src="Tool/29327f40e9c4d26b.png" alt="Kilos">
-              <span>Kilos</span>
-              </a>
-            </div>
-            <div class="category-item">
-              <a href="search-product.html?search=Samsung%20Galaxy%20S10"><img src="Tool/22fddf3c7da4c4f4.png" alt="Mobiles">
-              <span>Mobiles</span>
-            </a>
-            </div>
-            <div class="category-item">
-                <a href="search-product.html?search=Man%20Plaid%20Shirt">
-              <img src="Tool/0d75b34f7d8fbcb3.png" alt="Fashion">
-              <span>Fashion ▼</span>
-            </a>
-            </div>
-            <div class="category-item">
-                <a href="search-product.html?search=Apple%20Airpods">
-              <img src="Tool/69c6589653afdb9a.png" alt="Electronics">
-              <span>Electronics ▼</span>
-            </a>
-            </div>
-            <div class="category-item">
-              <a href="search-product.html?search=Annibale%20Colombo%20Bed"><img src="Tool/ab7e2b022a4587dd.jpg" alt="Home & Furniture">
-              <span>Home & Furniture ▼</span>
-              </a>
-            </div>
-
-            <div class="category-item">
-              <a href="search-product.html?search=Microwave%20Oven"><img src="Tool/0139228b2f7eb413.jpg" alt="Appliances">
-              <span>Appliances</span>
-            </a>
-            </div>
-            
-            <div class="category-item">
-              <img src="Tool/71050627a56b4693.png" alt="Flight Bookings">
-              <span>Flight Bookings</span>
-            </div>
-            <div class="category-item">
-             <a href="search-product.html?search=Vaseline%20Men%20Body%20and%20Face%20Lotion"> <img src="Tool/dff3f7adcf3a90c6.png" alt="Beauty, Toys & More">
-              <span>Beauty, Toys & More ▼</span>
-            </a>
-            </div>
-            <div class="category-item">
-             <a href="search-product.html?search=Sportbike%20Motorcycle"> <img src="Tool/05d708653beff580.png" alt="Two Wheelers">
-              <span>Two Wheelers ▼</span>
-            </a>
-            </div>
-          </div>
-        <div class="product-container">
-          <div class="slider_products">
-            <a href="search-product.html?search=Samsung%20Galaxy%20S7"><img src="Tool/slider1_p.png" alt="Image 1"></a>
-            <a href="search-product.html?search=Samsung%20Galaxy%20S7"><img src="Tool/slider2.png" alt="Image 2"></a>
-            <a href="search-product.html?search=WD%204TB%20Gaming%20Drive%20Works%20with%20Playstation%204%20Portable%20External%20Hard%20Drive"><img src="Tool/slider3.png" alt="Image 3"></a>
-
-          </div>
-          <div class="fashion-block">
-            <div class="men box">
-                <a href="search-product.html?search=Man%20Plaid%20Shirt"><img src="Tool/men.png" alt="Men"></a>   
-             </div>
-            <div class="women box">
-                <a href="search-product.html?search=Girl%20Summer%20Dress"><img src="Tool/women.png" alt="Women"></a>   
-            </div>
-            <div class="kids box">
-                <a href="search-product.html?search=Calvin%20Klein%20Heel%20Shoes"><img src="Tool/kids.png" alt="Shoes"></a>   
-            </div>
-          </div>
-          <div class="home">
-            <a href="search-product.html?search=Electric%20Stove">
-                <div class="kitchen box1">'
-                </div>
-                <span>Kitchen & Essentials</span>
-            </a>
-            <a href="search-product.html?search=Sportbike%20Motorcycle">
-                <div class="bikes box1">  </div>
-                <span>Bikes</span>
-            </a>
-            <a href="search-product.html?search=Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop">
-                <div class="Laptop box1"></div>
-                <span>Laptop</span>
-            </a>
-             </div>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="CSS/cart.css">
+     <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="CSS/cart.css">
+   <title>Document</title>
+ </head>
+ <body>
+     <script src="Scripts/cart.js"></script>
+   <header>
+     <div class="navbar">
+       <div class="logo" id="logo"><i>Ekart</i></div>
+       <div class="search">
+         <div id="search-bar" class="search-bar">
+           <i class="fas fa-search"></i>
+           <input id="search-input" type="text" placeholder="Search for Products, Brands and More" autocomplete="off">
          </div>
-
-        </div>
-    </div>
-    <div class="loader-background">
-        <div class="loader"></div>
-    </div>
-    
-    <script type="module" src="Scripts/index.js"></script>
-</body>
-</html>
+         <div id="search_menu" class="search_menu"></div>
+       </div>
+       <div class="nav-links">
+         <div class="login-profile" id="login-profile">
+           <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+           <span>Login</span>
+         </div>
+         <div class="profile">
+           <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+           <span id="profile-name"></span>
+         </div>
+         <a href="" id="cart">
+           <img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24">
+           <span>Cart</span>
+         </a>
+         <img id="three-dots" src="Tool/header_3verticalDots-ea7819.svg" alt="" width="24" height="24">
+         <div id="three-dots-menu">
+           <div id="profile-check" class="three-dots-items">
+             <img src="Tool/profile-52e0dc.svg" alt=""> My Profile
+           </div>
+           <div id="orders" class="three-dots-items">
+             <img src="Tool/orders-bfe8c4.svg" alt="">Orders
+           </div>
+           <div id="wishlist" class="three-dots-items">
+             <img src="Tool/sishlist.svg" alt=""> Wishlist
+           </div>
+           <div id="logout" class="three-dots-items">
+             <img src="Tool/logout-e63ddf.svg" alt="">Logout
+           </div>
+         </div>
+       </div>
+     </div>
+   </header>
+ 
+   <main class="cart-container" id="cart-container">
+     <!-- LEFT: Cart items and saved for later -->
+     <div class="cart-left">
+       <div id="cart-items"></div>
+       <div class="place-order-btn">
+         <button class="" id="place-order-btn">PLACE ORDER</button>
+       </div>
+     </div>
+ 
+     <!-- RIGHT: Price summary -->
+     <div class="cart-right">
+       <div class="cart-right-header">PRICE DETAILS</div>
+       <div class="summary">
+         <label>Items: <span id="item-count"></span></label>
+         <label>Price: <span id="total-price"></span></label>
+         <label>Discount: <span id="total-discount"></span></label>
+         <label style="border-bottom: 1px dashed #ddd;">Platform Fee: <span>$5</span></label>
+         <label style="font-weight: bold; border-bottom: 1px dashed #ddd;">Total Amount: <span id="total-amount"></span></label>
+         <label style="color: green;"><span id="total-savings" style="margin-left: 0px;"></span></label>
+       </div>
+     </div>
+   </main>
+ 
+   <div class="order-panel" id="order-panel">
+     <div class="panel" id="panel"></div>
+   </div>
+ 
+   <div class="cart-empty" id="cart-empty">
+     <img src="Tool/11329060.png" alt="">
+   </div>
+ 
+   <div class="loader-background">
+     <div class="loader"></div>
+   </div>
+ 
+   <script src="Scripts/cart.js"></script>
+ </body>
+ </html>
+ </html>
