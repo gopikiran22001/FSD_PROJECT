@@ -152,6 +152,8 @@ function searchProduct(value) {
 
 // On Load
 window.onload = async function () {
+    const searchValue = new URLSearchParams(window.location.search).get('search');
+    document.title = searchValue;
     const userCookie = getCookie("User");
     let user;
     let wishList = [];
@@ -349,7 +351,6 @@ window.onload = async function () {
     });
 
     const loader = document.querySelector(".loader-background");
-    const searchValue = new URLSearchParams(window.location.search).get('search');
     const products = await getProduct(searchValue);
 
     if (products.length === 0) {

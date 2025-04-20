@@ -6,6 +6,10 @@ function getCookie(name) {
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+if (!(getCookie("Login"))) {
+    window.location.href = "index.html";
+}
+
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -74,11 +78,7 @@ async function renderWishlist() {
     loader.style.display = "flex";
 
     const userCookie = getCookie("User");
-    if (!userCookie) {
-        loader.style.display = "none";
-        window.location.href = "index.html";
-        return;
-    }
+    
 
     function updateUI() {
         const userCookie = getCookie("User");

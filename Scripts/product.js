@@ -63,6 +63,7 @@ async function getProduct(value) {
 async function fetchProductData() {
     try {
         const decodedTitle = decodeURIComponent(searchValue);
+        document.title = decodedTitle;
         const data = await getProduct(decodedTitle);
         const loader = document.querySelector(".loader-background");
         loader.style.display = "none";

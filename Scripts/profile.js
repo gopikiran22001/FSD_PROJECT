@@ -7,7 +7,9 @@ function getCookie(name) {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
-
+if (!(getCookie("Login"))) {
+    window.location.href = "index.html";
+}
 // Login user
 async function loginUser(mail, password) {
     const jsonResponse = await fetch(apiUrl, {
@@ -92,9 +94,7 @@ async function getField(fieldName, mail) {
 window.onload = async () => {
     const userCookie = getCookie("User");
 
-    if (!(getCookie("Login") || userCookie)) {
-        window.location.href = "index.html";
-    }
+    
 
     const user = JSON.parse(decodeURIComponent(userCookie));
     const { firstName, lastName, DOB: dob, gender, mail: email, phone, password } = user;

@@ -12,6 +12,10 @@ function getCookie(name) {
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+if (!getCookie("Login")) {
+  window.location.href = "index.html";
+}
+
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -70,9 +74,11 @@ const userCookie = getCookie("User");
 let cartItems = [];
 let orderList = [];
 let addressList = [];
+
 const cartContainer = document.getElementById("cart-items");
 const orderContainer = document.getElementById("panel");
 const user = JSON.parse(decodeURIComponent(userCookie));
+const loader = document.querySelector(".loader-background");
 
 async function addressListCall() {
   orderContainer.innerHTML = '';
@@ -103,6 +109,7 @@ function renderCart() {
 
   cartContainer.innerHTML = "";
   orderContainer.innerHTML = "";
+
   let totalPrice = 0;
   let totalDiscount = 0;
   let itemCount = 0;
@@ -158,36 +165,56 @@ function renderCart() {
       alert("No addresses found. Please add an address in your profile.");
       return;
     }
+
     document.getElementById("order-panel").style.display = "block";
+    document.getElementById("exit-order-panel").addEventListener("click", () => {
+      document.getElementById("order-panel").style.display = "none";
+    });
+
+    loader.style.display = "block";
     await addressListCall();
+    loader.style.display = "none";
 
     document.querySelectorAll(".address").forEach(icon => {
       icon.addEventListener("click", async (event) => {
         event.stopPropagation();
+        loader.style.display = "block";
         const index = parseInt(icon.getAttribute("data-index"));
         const orderAddress = addressList[index];
+
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        const formatted = `${year}-${month}-${day}`;
+
         const orderDetails = {
+          orderDate: formatted,
           address: orderAddress,
           products: cartItems,
           totalPrice: totalPrice - totalDiscount + 5
         };
+
         orderList.push(orderDetails);
 
         const success = await updateField("orders", orderList, user.mail);
         if (!success) {
           alert("Can't update orders.");
           document.getElementById("order-panel").style.display = "none";
+          loader.style.display = "none";
           return;
         }
 
         if (!await updateField("cart", [], user.mail)) {
           alert("Can't update Cart.");
           document.getElementById("order-panel").style.display = "none";
+          loader.style.display = "none";
           return;
         }
 
         alert("Order Successfully");
         document.getElementById("order-panel").style.display = "none";
+        loader.style.display = "none";
         location.reload();
       });
     });
@@ -204,7 +231,6 @@ function renderCart() {
 
 // ===== Event Handlers =====
 window.onload = async () => {
-  const loader = document.querySelector(".loader-background");
   loader.style.display = "flex";
 
   if (!userCookie) {
@@ -223,6 +249,7 @@ window.onload = async () => {
   addressList = addressData.address || [];
 
   const loginStatus = getCookie("Login");
+
   if (loginStatus && userCookie) {
     document.getElementById("profile-name").innerHTML = user.firstName;
     document.querySelector(".login-profile").style.display = "none";
@@ -254,6 +281,7 @@ window.onload = async () => {
   });
 
   let search_menu = [];
+
   if (!sessionStorage.getItem("isSearchMenu")) {
     search_menu = await search_menu_mongo();
     sessionStorage.setItem("isSearchMenu", "true");

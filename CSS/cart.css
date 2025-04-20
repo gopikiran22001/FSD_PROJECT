@@ -371,7 +371,7 @@ body::-webkit-scrollbar {
     height: 50px;
     width: 250px;
     font-size: 1rem;
-    background-color: #fb641b;
+    background-color: #8f6dff;
     color: #fff;
     border: 0px;
     border-radius: 3px;
@@ -396,6 +396,22 @@ body::-webkit-scrollbar {
     height: 100%;
     background-color: rgba(128, 128, 128, 0.5);
     z-index: 500;
+}
+
+.exit-order-panel {
+    position: fixed;
+    color: red;
+    background-color: transparent;
+    border: 0px;
+    top: 10%;
+    right: 20%;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    cursor: pointer;
 }
 
 .panel {

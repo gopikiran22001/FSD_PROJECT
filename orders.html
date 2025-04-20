@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/orders.css">
-    <title>Document</title>
+    <title>Orders</title>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+          <div class="logo" id="logo"><i>Ekart</i></div>
+          <div class="search">
+            <div id="search-bar" class="search-bar">
+              <i class="fas fa-search"></i>
+              <input id="search-input" type="text" placeholder="Search for Products, Brands and More" autocomplete="off">
+            </div>
+            <div id="search_menu" class="search_menu"></div>
+          </div>
+          <div class="nav-links">
+            <div class="login-profile" id="login-profile">
+              <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+              <span>Login</span>
+            </div>
+            <div class="profile">
+              <img src="Tool/profile-52e0dc.svg" alt="" width="24" height="24">
+              <span id="profile-name"></span>
+            </div>
+            <a href="" id="cart">
+              <img src="Tool/header_cart-eed150.svg" alt="" width="24" height="24">
+              <span>Cart</span>
+            </a>
+            <img id="three-dots" src="Tool/header_3verticalDots-ea7819.svg" alt="" width="24" height="24">
+            <div id="three-dots-menu">
+              <div id="profile-check" class="three-dots-items">
+                <img src="Tool/profile-52e0dc.svg" alt=""> My Profile
+              </div>
+              <div id="orders" class="three-dots-items">
+                <img src="Tool/orders-bfe8c4.svg" alt="">Orders
+              </div>
+              <div id="wishlist" class="three-dots-items">
+                <img src="Tool/sishlist.svg" alt=""> Wishlist
+              </div>
+              <div id="logout" class="three-dots-items">
+                <img src="Tool/logout-e63ddf.svg" alt="">Logout
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="order-container">
+        <h2>My Orders</h2>
+        <div id="order-list"></div>
+    </div>
+    
+      <div class="loader-background">
+        <div class="loader"></div>
+      </div>
     <script src="Scripts/orders.js"></script>
 </body>
 </html>
