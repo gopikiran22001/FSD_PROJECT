@@ -223,7 +223,7 @@ function renderCart() {
   addressListCall();
 
   document.getElementById("total-price").textContent = "$" + totalPrice.toFixed(2);
-  document.getElementById("total-discount").textContent = totalDiscount.toFixed(2) + '%';
+  document.getElementById("total-discount").textContent = '$'+totalDiscount.toFixed(2) ;
   document.getElementById("item-count").textContent = itemCount;
   document.getElementById("total-amount").textContent = " $" + (totalPrice - totalDiscount + 5).toFixed(2);
   document.getElementById("total-savings").textContent = "You will save $" + totalDiscount.toFixed(2) + " on this order";
