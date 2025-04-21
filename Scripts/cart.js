@@ -81,7 +81,7 @@ const user = JSON.parse(decodeURIComponent(userCookie));
 const loader = document.querySelector(".loader-background");
 
 async function addressListCall() {
-  orderContainer.innerHTML = '';
+  orderContainer.innerHTML = '<h3>SELECT ADDRESS</h3>';
   addressList.forEach((address, index) => {
     const div = document.createElement("div");
     div.classList.add("address");
@@ -130,7 +130,7 @@ function renderCart() {
         <img src="${item.images ? item.images[0] : item.image}" alt="${item.title}">
         <div class="cart-details">
           <h4>${item.title}</h4>
-          <p>${item.brand}</p>
+          <p>${item.brand??''}</p>
           ${item.outOfStock ? '<p style="color:red">Out Of Stock</p>' : ''}
           <div class="price">
             $${item.price}
