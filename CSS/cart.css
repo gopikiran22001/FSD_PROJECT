@@ -209,13 +209,13 @@ body::-webkit-scrollbar {
 }
 
 .cart-right {
-    width: 380px;
-    max-height: 60vh; /* Let it grow naturally if needed */
+    width: 25%;
+    max-height: 55vh; /* Let it grow naturally if needed */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     position: fixed; /* Change from fixed to prevent overlap */
     top: 11vh;
-    right: 5rem;
+    right: 5%;
     /* padding: 1.5rem; */
     display: flex;
     flex-direction: column;
@@ -259,8 +259,8 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     width: 60%;
-    margin-left: 5rem;
-    margin-right: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
