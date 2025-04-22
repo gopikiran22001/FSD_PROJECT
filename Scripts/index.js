@@ -1,4 +1,3 @@
-// const apiUrl = mongo_api;
 const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
 
 function getCookie(name) {
@@ -22,6 +21,7 @@ class User {
         this.wishlist = [];
     }
 }
+
 async function getField(fieldName, collection) {
     const jsonResponse = await fetch(apiUrl, {
         method: 'POST',
@@ -43,7 +43,7 @@ async function getField(fieldName, collection) {
 async function search_menu_mongo() {
     const jsonResponse = await fetch(apiUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ collection: "search_menu", operation: "search_menu" })
     }).then(response => response.json());
 
@@ -122,13 +122,27 @@ async function loginUserCheck(mail, password) {
 }
 
 function searchProduct(value) {
-    if(value) {
+    if (value) {
         window.location.href = `search-product.html?search=${encodeURIComponent(value)}`;
     }
 }
 
 window.onload = async function () {
-    
+    const slidesWrapper = document.querySelector('.slides-wrapper');
+    const slides = document.querySelectorAll('.slide');
+    let activeIndex = 0;
+    const totalSlides = slides.length;
+
+    function moveToNextSlide() {
+        slides[activeIndex].classList.remove('active');
+        activeIndex = (activeIndex + 1) % totalSlides;
+        slides[activeIndex].classList.add('active');
+        slidesWrapper.style.transform = `translateX(-${100 * activeIndex}%)`;
+    }
+
+    setInterval(moveToNextSlide, 3000);
+    slides[activeIndex].classList.add('active');
+
     function updateUI() {
         const userCookie = getCookie("User");
         if (getCookie("Login") && userCookie) {
@@ -142,13 +156,14 @@ window.onload = async function () {
             document.getElementById("three-dots").removeEventListener("mouseover", threeDots);
         }
     }
+
     document.getElementById("togglePassword1").addEventListener("click", function () {
         const passwordInput = document.getElementById("login-password");
         const type = passwordInput.type === "password" ? "text" : "password";
         passwordInput.type = type;
         this.classList.toggle("fa-eye-slash");
-      });
-      
+    });
+
     document.getElementById("signInForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         const mail = document.getElementById("login-email").value;
@@ -168,6 +183,7 @@ window.onload = async function () {
         }
         location.reload();
     });
+
     document.getElementById("signupForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         const firstName = document.getElementById("firstName").value;
@@ -231,14 +247,12 @@ window.onload = async function () {
 
     searchInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-          event.preventDefault();
-        //   console.log(searchInput.value);
-            if(searchInput.value) {
+            event.preventDefault();
+            if (searchInput.value) {
                 searchProduct(searchInput.value);
             }
         }
-      });
-      
+    });
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
@@ -269,6 +283,7 @@ window.onload = async function () {
             dropdown.style.display = "none";
         }
     });
+
     function threeDots() {
         document.getElementById("three-dots-menu").style.display = "flex";
     }
@@ -326,18 +341,17 @@ window.onload = async function () {
     document.getElementById("profile-check").addEventListener("click", () => {
         window.location.href = "profile.html";
     });
+
     document.getElementById("orders").addEventListener("click", () => {
         window.location.href = "orders.html";
     });
+
     document.getElementById("wishlist").addEventListener("click", () => {
         window.location.href = "wishlist.html";
     });
+
     document.getElementById("cart").addEventListener("click", (event) => {
         event.preventDefault();
         window.location.href = "cart.html";
     });
-    // document.getElementById("btn").addEventListener("click", async () => {
-    //     const field = await getField("DOB", "users");
-    //     console.log(field);
-    // });
 };

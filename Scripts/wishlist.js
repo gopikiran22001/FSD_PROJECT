@@ -210,7 +210,7 @@ async function renderWishlist() {
         const random = getRandomNumber(1, 30);
 
         el.innerHTML = `
-            <img class="product-image" src="${item.images ? item.images[0] : item.image}" alt="${item.title}">
+            <img class="product-image" data-index='${index}' src="${item.images ? item.images[0] : item.image}" alt="${item.title}">
             <div class="product-details">
                 <div class="product-title">${item.title}
                     ${item.availabilityStatus ? '<span class="assured-icon">✔️ Assured</span>' : ""}
@@ -225,6 +225,15 @@ async function renderWishlist() {
             <div class="delete-icon" data-index="${index}">🗑️</div>
         `;
         list.appendChild(el);
+    });
+
+    document.querySelectorAll(".wishlist-item .product-image").forEach((img) => {
+        img.style.cursor='pointer';
+        img.addEventListener("click", (e) => {
+            const index = e.target.getAttribute("data-index");
+            const product = wishlist[index];
+            window.location.href = `product.html?title=${encodeURIComponent(product.title)}`;
+        });
     });
 
     document.querySelectorAll(".delete-icon").forEach(icon => {
