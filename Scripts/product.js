@@ -139,6 +139,17 @@ async function fetchProductData() {
                     alert("Added to Cart");
                 }
             });
+        } else {
+            document.getElementById("add-to-wishlist").addEventListener("click", async () => {
+                alert("Not Logged in");
+                return;
+            });
+
+            // Add to cart
+            document.getElementById("add-to-cart").addEventListener("click", async () => {
+                alert("Not Logged in");
+                return;
+            });
         }
 
         // Meta info
