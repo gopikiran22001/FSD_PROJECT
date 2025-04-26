@@ -1,5 +1,3 @@
-// API endpoint for E-Commerce backend
-const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
 
 // Helper to get cookie value
 function getCookie(name) {

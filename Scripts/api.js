@@ -1,0 +1,1 @@
+const apiUrl='https://dyrebssqh6.execute-api.ap-south-1.amazonaws.com/E-Commerce';

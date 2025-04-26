@@ -1,0 +1,1538 @@
+[{
+  "_id": {
+    "$oid": "67fb37daa095a31d1848e9ee"
+  },
+  "firstName": "xyz",
+  "lastName": "xyz",
+  "DOB": "2005-09-17",
+  "gender": "Male",
+  "address": [
+    {
+      "flatNo": "1-81",
+      "apartment": "01",
+      "street": "51th",
+      "city": "51th",
+      "district": "xyz",
+      "state": "xyz",
+      "pincode": "522000",
+      "landmark": "PVP PAKKANA",
+      "addressType": "home"
+    }
+  ],
+  "mail": "xyz@xyz",
+  "phone": "000",
+  "password": "xyz",
+  "cart": [
+    {
+      "quantity": 1,
+      "product": {
+        "id": 6,
+        "title": "Calvin Klein CK One",
+        "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+        "category": "fragrances",
+        "price": 49.99,
+        "discountPercentage": 0.32,
+        "rating": 4.85,
+        "stock": 17,
+        "tags": [
+          "fragrances",
+          "perfumes"
+        ],
+        "brand": "Calvin Klein",
+        "sku": "DZM2JQZE",
+        "weight": 5,
+        "dimensions": {
+          "width": 11.53,
+          "height": 14.44,
+          "depth": 6.81
+        },
+        "warrantyInformation": "5 year warranty",
+        "shippingInformation": "Ships overnight",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Great value for money!",
+            "date": "2024-05-23T08:56:21.619Z",
+            "reviewerName": "Sophia Brown",
+            "reviewerEmail": "sophia.brown@x.dummyjson.com"
+          },
+          {
+            "rating": 3,
+            "comment": "Very disappointed!",
+            "date": "2024-05-23T08:56:21.619Z",
+            "reviewerName": "Madison Collins",
+            "reviewerEmail": "madison.collins@x.dummyjson.com"
+          },
+          {
+            "rating": 1,
+            "comment": "Poor quality!",
+            "date": "2024-05-23T08:56:21.619Z",
+            "reviewerName": "Maya Reed",
+            "reviewerEmail": "maya.reed@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "No return policy",
+        "minimumOrderQuantity": 20,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.619Z",
+          "updatedAt": "2024-05-23T08:56:21.619Z",
+          "barcode": "2210136215089",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png",
+          "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png",
+          "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/3.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png"
+      }
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "id": 83,
+        "title": "Blue & Black Check Shirt",
+        "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+        "category": "mens-shirts",
+        "price": 29.99,
+        "discountPercentage": 1.41,
+        "rating": 4.19,
+        "stock": 44,
+        "tags": [
+          "clothing",
+          "men's shirts"
+        ],
+        "brand": "Fashion Trends",
+        "sku": "6RJDTVCU",
+        "weight": 6,
+        "dimensions": {
+          "width": 17.25,
+          "height": 27.31,
+          "depth": 20.88
+        },
+        "warrantyInformation": "No warranty",
+        "shippingInformation": "Ships in 1 month",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Highly recommended!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Mason Parker",
+            "reviewerEmail": "mason.parker@x.dummyjson.com"
+          },
+          {
+            "rating": 5,
+            "comment": "Highly impressed!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Avery Perez",
+            "reviewerEmail": "avery.perez@x.dummyjson.com"
+          },
+          {
+            "rating": 5,
+            "comment": "Fast shipping!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Nathan Reed",
+            "reviewerEmail": "nathan.reed@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "7 days return policy",
+        "minimumOrderQuantity": 4,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.623Z",
+          "updatedAt": "2024-05-23T08:56:21.623Z",
+          "barcode": "8840720880947",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/1.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/2.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/3.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/4.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
+      }
+    },
+    {
+      "quantity": 4,
+      "product": {
+        "id": 85,
+        "title": "Man Plaid Shirt",
+        "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+        "category": "mens-shirts",
+        "price": 34.99,
+        "discountPercentage": 17.53,
+        "rating": 3.66,
+        "stock": 65,
+        "tags": [
+          "clothing",
+          "men's shirts"
+        ],
+        "brand": "Classic Wear",
+        "sku": "TWL7HRBB",
+        "weight": 1,
+        "dimensions": {
+          "width": 29.56,
+          "height": 29.84,
+          "depth": 7.77
+        },
+        "warrantyInformation": "Lifetime warranty",
+        "shippingInformation": "Ships in 1 week",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 3,
+            "comment": "Would not buy again!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Nora Mills",
+            "reviewerEmail": "nora.mills@x.dummyjson.com"
+          },
+          {
+            "rating": 1,
+            "comment": "Very disappointed!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Addison Ward",
+            "reviewerEmail": "addison.ward@x.dummyjson.com"
+          },
+          {
+            "rating": 4,
+            "comment": "Awesome product!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Emily Brown",
+            "reviewerEmail": "emily.brown@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.623Z",
+          "updatedAt": "2024-05-23T08:56:21.623Z",
+          "barcode": "9383795178668",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
+      }
+    },
+    {
+      "quantity": 3,
+      "product": {
+        "id": 84,
+        "title": "Gigabyte Aorus Men Tshirt",
+        "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+        "category": "mens-shirts",
+        "price": 24.99,
+        "discountPercentage": 12.6,
+        "rating": 4.95,
+        "stock": 64,
+        "tags": [
+          "clothing",
+          "men's t-shirts"
+        ],
+        "brand": "Gigabyte",
+        "sku": "QA703Y60",
+        "weight": 2,
+        "dimensions": {
+          "width": 8.54,
+          "height": 23.52,
+          "depth": 5.66
+        },
+        "warrantyInformation": "1 month warranty",
+        "shippingInformation": "Ships in 1 week",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Highly recommended!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Logan Lawson",
+            "reviewerEmail": "logan.lawson@x.dummyjson.com"
+          },
+          {
+            "rating": 4,
+            "comment": "Great value for money!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Logan Lawson",
+            "reviewerEmail": "logan.lawson@x.dummyjson.com"
+          },
+          {
+            "rating": 5,
+            "comment": "Great value for money!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Oscar Powers",
+            "reviewerEmail": "oscar.powers@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 4,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.623Z",
+          "updatedAt": "2024-05-23T08:56:21.623Z",
+          "barcode": "3072645939073",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+      }
+    }
+  ],
+  "orders": [],
+  "wishlist": [
+    {
+      "id": 84,
+      "title": "Gigabyte Aorus Men Tshirt",
+      "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+      "category": "mens-shirts",
+      "price": 24.99,
+      "discountPercentage": 12.6,
+      "rating": 4.95,
+      "stock": 64,
+      "tags": [
+        "clothing",
+        "men's t-shirts"
+      ],
+      "brand": "Gigabyte",
+      "sku": "QA703Y60",
+      "weight": 2,
+      "dimensions": {
+        "width": 8.54,
+        "height": 23.52,
+        "depth": 5.66
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Logan Lawson",
+          "reviewerEmail": "logan.lawson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Logan Lawson",
+          "reviewerEmail": "logan.lawson@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Oscar Powers",
+          "reviewerEmail": "oscar.powers@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 4,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "3072645939073",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+    },
+    {
+      "id": 83,
+      "title": "Blue & Black Check Shirt",
+      "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+      "category": "mens-shirts",
+      "price": 29.99,
+      "discountPercentage": 1.41,
+      "rating": 4.19,
+      "stock": 44,
+      "tags": [
+        "clothing",
+        "men's shirts"
+      ],
+      "brand": "Fashion Trends",
+      "sku": "6RJDTVCU",
+      "weight": 6,
+      "dimensions": {
+        "width": 17.25,
+        "height": 27.31,
+        "depth": 20.88
+      },
+      "warrantyInformation": "No warranty",
+      "shippingInformation": "Ships in 1 month",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Avery Perez",
+          "reviewerEmail": "avery.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Fast shipping!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Nathan Reed",
+          "reviewerEmail": "nathan.reed@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "7 days return policy",
+      "minimumOrderQuantity": 4,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "8840720880947",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
+    },
+    {
+      "id": 85,
+      "title": "Man Plaid Shirt",
+      "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+      "category": "mens-shirts",
+      "price": 34.99,
+      "discountPercentage": 17.53,
+      "rating": 3.66,
+      "stock": 65,
+      "tags": [
+        "clothing",
+        "men's shirts"
+      ],
+      "brand": "Classic Wear",
+      "sku": "TWL7HRBB",
+      "weight": 1,
+      "dimensions": {
+        "width": 29.56,
+        "height": 29.84,
+        "depth": 7.77
+      },
+      "warrantyInformation": "Lifetime warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 3,
+          "comment": "Would not buy again!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Nora Mills",
+          "reviewerEmail": "nora.mills@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Addison Ward",
+          "reviewerEmail": "addison.ward@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Emily Brown",
+          "reviewerEmail": "emily.brown@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "9383795178668",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6800be1fee4bcf86e7c866ee"
+  },
+  "firstName": "ram",
+  "lastName": "boyina",
+  "DOB": "2005-07-16",
+  "gender": "Male",
+  "address": [],
+  "mail": "ram@gmail.com",
+  "phone": "93466374",
+  "password": "r@m16",
+  "cart": [],
+  "orders": [],
+  "wishlist": []
+},
+{
+  "_id": {
+    "$oid": "68049574cc09e54fa941e4dd"
+  },
+  "firstName": "Gopi",
+  "lastName": "Kiran",
+  "DOB": "2025-04-01",
+  "gender": "Male",
+  "address": [
+    {
+      "flatNo": "101",
+      "apartment": "ooha",
+      "street": "GVM",
+      "city": "Gannavaram",
+      "district": "Krishna",
+      "state": "ANDHRA",
+      "pincode": "521101",
+      "landmark": "Eww",
+      "addressType": "home"
+    }
+  ],
+  "mail": "abc@abc",
+  "phone": "8855779966",
+  "password": "abc",
+  "cart": [
+    {
+      "quantity": 1,
+      "product": {
+        "id": 79,
+        "title": "Asus Zenbook Pro Dual Screen Laptop",
+        "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+        "category": "laptops",
+        "price": 1799.99,
+        "discountPercentage": 9.21,
+        "rating": 3.14,
+        "stock": 38,
+        "tags": [
+          "laptops"
+        ],
+        "brand": "Asus",
+        "sku": "4A9KFMBG",
+        "weight": 8,
+        "dimensions": {
+          "width": 19.67,
+          "height": 11.05,
+          "depth": 14.32
+        },
+        "warrantyInformation": "No warranty",
+        "shippingInformation": "Ships in 3-5 business days",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Very satisfied!",
+            "date": "2024-05-23T08:56:21.622Z",
+            "reviewerName": "Jack Ward",
+            "reviewerEmail": "jack.ward@x.dummyjson.com"
+          },
+          {
+            "rating": 1,
+            "comment": "Very disappointed!",
+            "date": "2024-05-23T08:56:21.622Z",
+            "reviewerName": "Ava Harris",
+            "reviewerEmail": "ava.harris@x.dummyjson.com"
+          },
+          {
+            "rating": 5,
+            "comment": "Great value for money!",
+            "date": "2024-05-23T08:56:21.622Z",
+            "reviewerName": "Brayden Fleming",
+            "reviewerEmail": "brayden.fleming@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "No return policy",
+        "minimumOrderQuantity": 1,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.622Z",
+          "updatedAt": "2024-05-23T08:56:21.622Z",
+          "barcode": "2899455033799",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/1.png",
+          "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/2.png",
+          "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/3.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/thumbnail.png"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "orderDate": "2025-04-20",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 84,
+            "title": "Gigabyte Aorus Men Tshirt",
+            "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+            "category": "mens-shirts",
+            "price": 24.99,
+            "discountPercentage": 12.6,
+            "rating": 4.95,
+            "stock": 64,
+            "tags": [
+              "clothing",
+              "men's t-shirts"
+            ],
+            "brand": "Gigabyte",
+            "sku": "QA703Y60",
+            "weight": 2,
+            "dimensions": {
+              "width": 8.54,
+              "height": 23.52,
+              "depth": 5.66
+            },
+            "warrantyInformation": "1 month warranty",
+            "shippingInformation": "Ships in 1 week",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 4,
+                "comment": "Highly recommended!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Logan Lawson",
+                "reviewerEmail": "logan.lawson@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Logan Lawson",
+                "reviewerEmail": "logan.lawson@x.dummyjson.com"
+              },
+              {
+                "rating": 5,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Oscar Powers",
+                "reviewerEmail": "oscar.powers@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "30 days return policy",
+            "minimumOrderQuantity": 4,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.623Z",
+              "updatedAt": "2024-05-23T08:56:21.623Z",
+              "barcode": "3072645939073",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 29.99
+    },
+    {
+      "orderDate": "2025-04-22",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 16,
+            "title": "Apple",
+            "description": "Fresh and crisp apples, perfect for snacking or incorporating into various recipes.",
+            "category": "groceries",
+            "price": 1.99,
+            "discountPercentage": 1.97,
+            "rating": 2.96,
+            "stock": 9,
+            "tags": [
+              "fruits"
+            ],
+            "sku": "QTROUV79",
+            "weight": 8,
+            "dimensions": {
+              "width": 8.29,
+              "height": 5.58,
+              "depth": 12.41
+            },
+            "warrantyInformation": "2 year warranty",
+            "shippingInformation": "Ships in 2 weeks",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 4,
+                "comment": "Great product!",
+                "date": "2024-05-23T08:56:21.620Z",
+                "reviewerName": "Logan Lee",
+                "reviewerEmail": "logan.lee@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great product!",
+                "date": "2024-05-23T08:56:21.620Z",
+                "reviewerName": "Elena Long",
+                "reviewerEmail": "elena.long@x.dummyjson.com"
+              },
+              {
+                "rating": 1,
+                "comment": "Not as described!",
+                "date": "2024-05-23T08:56:21.620Z",
+                "reviewerName": "Grayson Coleman",
+                "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "60 days return policy",
+            "minimumOrderQuantity": 44,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.620Z",
+              "updatedAt": "2024-05-23T08:56:21.620Z",
+              "barcode": "2517819903837",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 6.99
+    },
+    {
+      "orderDate": "2025-04-25",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 121,
+            "title": "iPhone 5s",
+            "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+            "category": "smartphones",
+            "price": 199.99,
+            "discountPercentage": 11.85,
+            "rating": 3.92,
+            "stock": 65,
+            "tags": [
+              "smartphones",
+              "apple"
+            ],
+            "brand": "Apple",
+            "sku": "AZ1L68SM",
+            "weight": 4,
+            "dimensions": {
+              "width": 8.49,
+              "height": 25.34,
+              "depth": 18.12
+            },
+            "warrantyInformation": "1 week warranty",
+            "shippingInformation": "Ships in 1 week",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 4,
+                "comment": "Highly impressed!",
+                "date": "2024-05-23T08:56:21.625Z",
+                "reviewerName": "Wyatt Perry",
+                "reviewerEmail": "wyatt.perry@x.dummyjson.com"
+              },
+              {
+                "rating": 5,
+                "comment": "Awesome product!",
+                "date": "2024-05-23T08:56:21.625Z",
+                "reviewerName": "Olivia Anderson",
+                "reviewerEmail": "olivia.anderson@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Highly recommended!",
+                "date": "2024-05-23T08:56:21.625Z",
+                "reviewerName": "Mateo Nguyen",
+                "reviewerEmail": "mateo.nguyen@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "No return policy",
+            "minimumOrderQuantity": 2,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.625Z",
+              "updatedAt": "2024-05-23T08:56:21.625Z",
+              "barcode": "2903942810911",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/1.png",
+              "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/2.png",
+              "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/3.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 204.99
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 84,
+      "title": "Gigabyte Aorus Men Tshirt",
+      "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+      "category": "mens-shirts",
+      "price": 24.99,
+      "discountPercentage": 12.6,
+      "rating": 4.95,
+      "stock": 64,
+      "tags": [
+        "clothing",
+        "men's t-shirts"
+      ],
+      "brand": "Gigabyte",
+      "sku": "QA703Y60",
+      "weight": 2,
+      "dimensions": {
+        "width": 8.54,
+        "height": 23.52,
+        "depth": 5.66
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Logan Lawson",
+          "reviewerEmail": "logan.lawson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Logan Lawson",
+          "reviewerEmail": "logan.lawson@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Oscar Powers",
+          "reviewerEmail": "oscar.powers@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 4,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "3072645939073",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+    },
+    {
+      "id": 121,
+      "title": "iPhone 5s",
+      "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+      "category": "smartphones",
+      "price": 199.99,
+      "discountPercentage": 11.85,
+      "rating": 3.92,
+      "stock": 65,
+      "tags": [
+        "smartphones",
+        "apple"
+      ],
+      "brand": "Apple",
+      "sku": "AZ1L68SM",
+      "weight": 4,
+      "dimensions": {
+        "width": 8.49,
+        "height": 25.34,
+        "depth": 18.12
+      },
+      "warrantyInformation": "1 week warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.625Z",
+          "reviewerName": "Wyatt Perry",
+          "reviewerEmail": "wyatt.perry@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Awesome product!",
+          "date": "2024-05-23T08:56:21.625Z",
+          "reviewerName": "Olivia Anderson",
+          "reviewerEmail": "olivia.anderson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.625Z",
+          "reviewerName": "Mateo Nguyen",
+          "reviewerEmail": "mateo.nguyen@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "No return policy",
+      "minimumOrderQuantity": 2,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.625Z",
+        "updatedAt": "2024-05-23T08:56:21.625Z",
+        "barcode": "2903942810911",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/1.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/2.png",
+        "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/3.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/thumbnail.png"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68049757cf9cdef11d6e8456"
+  },
+  "firstName": "lakshman",
+  "lastName": "502",
+  "DOB": "2005-09-17",
+  "gender": "Male",
+  "address": [
+    {
+      "flatNo": "hostel",
+      "apartment": "hostel",
+      "street": "hostel",
+      "city": "hostel",
+      "district": "hostel",
+      "state": "hostel",
+      "pincode": "123455",
+      "landmark": "hostel",
+      "addressType": "home"
+    }
+  ],
+  "mail": "lakshman@mail.com",
+  "phone": "1234",
+  "password": "lakshman",
+  "cart": [],
+  "orders": [
+    {
+      "orderDate": "2025-04-20",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 16,
+            "title": "Apple",
+            "description": "Fresh and crisp apples, perfect for snacking or incorporating into various recipes.",
+            "category": "groceries",
+            "price": 1.99,
+            "discountPercentage": 1.97,
+            "rating": 2.96,
+            "stock": 9,
+            "tags": [
+              "fruits"
+            ],
+            "sku": "QTROUV79",
+            "weight": 8,
+            "dimensions": {
+              "width": 8.29,
+              "height": 5.58,
+              "depth": 12.41
+            },
+            "warrantyInformation": "2 year warranty",
+            "shippingInformation": "Ships in 2 weeks",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 4,
+                "comment": "Great product!",
+                "date": "2024-05-23T08:56:21.620Z",
+                "reviewerName": "Logan Lee",
+                "reviewerEmail": "logan.lee@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great product!",
+                "date": "2024-05-23T08:56:21.620Z",
+                "reviewerName": "Elena Long",
+                "reviewerEmail": "elena.long@x.dummyjson.com"
+              },
+              {
+                "rating": 1,
+                "comment": "Not as described!",
+                "date": "2024-05-23T08:56:21.620Z",
+                "reviewerName": "Grayson Coleman",
+                "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "60 days return policy",
+            "minimumOrderQuantity": 44,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.620Z",
+              "updatedAt": "2024-05-23T08:56:21.620Z",
+              "barcode": "2517819903837",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 6.99
+    },
+    {
+      "orderDate": "2025-04-24",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 84,
+            "title": "Gigabyte Aorus Men Tshirt",
+            "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+            "category": "mens-shirts",
+            "price": 24.99,
+            "discountPercentage": 12.6,
+            "rating": 4.95,
+            "stock": 64,
+            "tags": [
+              "clothing",
+              "men's t-shirts"
+            ],
+            "brand": "Gigabyte",
+            "sku": "QA703Y60",
+            "weight": 2,
+            "dimensions": {
+              "width": 8.54,
+              "height": 23.52,
+              "depth": 5.66
+            },
+            "warrantyInformation": "1 month warranty",
+            "shippingInformation": "Ships in 1 week",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 4,
+                "comment": "Highly recommended!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Logan Lawson",
+                "reviewerEmail": "logan.lawson@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Logan Lawson",
+                "reviewerEmail": "logan.lawson@x.dummyjson.com"
+              },
+              {
+                "rating": 5,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Oscar Powers",
+                "reviewerEmail": "oscar.powers@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "30 days return policy",
+            "minimumOrderQuantity": 4,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.623Z",
+              "updatedAt": "2024-05-23T08:56:21.623Z",
+              "barcode": "3072645939073",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 29.99
+    },
+    {
+      "orderDate": "2025-04-24",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 10,
+            "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+            "price": 109,
+            "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+            "category": "electronics",
+            "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+            "rating": {
+              "rate": 2.9,
+              "count": 470
+            }
+          }
+        }
+      ],
+      "totalPrice": 114
+    },
+    {
+      "orderDate": "2025-04-24",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 12,
+            "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+            "price": 114,
+            "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+            "category": "electronics",
+            "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+            "rating": {
+              "rate": 4.8,
+              "count": 400
+            }
+          }
+        }
+      ],
+      "totalPrice": 119
+    },
+    {
+      "orderDate": "2025-04-24",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 86,
+            "title": "Man Short Sleeve Shirt",
+            "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+            "category": "mens-shirts",
+            "price": 19.99,
+            "discountPercentage": 8.65,
+            "rating": 4.62,
+            "stock": 20,
+            "tags": [
+              "clothing",
+              "men's shirts"
+            ],
+            "brand": "Casual Comfort",
+            "sku": "KEVGVDTV",
+            "weight": 2,
+            "dimensions": {
+              "width": 7.11,
+              "height": 28.63,
+              "depth": 27.54
+            },
+            "warrantyInformation": "5 year warranty",
+            "shippingInformation": "Ships in 2 weeks",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 5,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Caleb Nelson",
+                "reviewerEmail": "caleb.nelson@x.dummyjson.com"
+              },
+              {
+                "rating": 1,
+                "comment": "Disappointing product!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Emily Johnson",
+                "reviewerEmail": "emily.johnson@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great product!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Mila Hernandez",
+                "reviewerEmail": "mila.hernandez@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "7 days return policy",
+            "minimumOrderQuantity": 1,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.623Z",
+              "updatedAt": "2024-05-23T08:56:21.623Z",
+              "barcode": "8162805546713",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/1.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/2.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/3.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/4.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 24.99
+    },
+    {
+      "orderDate": "2025-04-24",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 17,
+            "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+            "price": 39.99,
+            "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+            "category": "women's clothing",
+            "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+            "rating": {
+              "rate": 3.8,
+              "count": 679
+            }
+          }
+        }
+      ],
+      "totalPrice": 44.99
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 16,
+      "title": "Apple",
+      "description": "Fresh and crisp apples, perfect for snacking or incorporating into various recipes.",
+      "category": "groceries",
+      "price": 1.99,
+      "discountPercentage": 1.97,
+      "rating": 2.96,
+      "stock": 9,
+      "tags": [
+        "fruits"
+      ],
+      "sku": "QTROUV79",
+      "weight": 8,
+      "dimensions": {
+        "width": 8.29,
+        "height": 5.58,
+        "depth": 12.41
+      },
+      "warrantyInformation": "2 year warranty",
+      "shippingInformation": "Ships in 2 weeks",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Logan Lee",
+          "reviewerEmail": "logan.lee@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Elena Long",
+          "reviewerEmail": "elena.long@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Grayson Coleman",
+          "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "60 days return policy",
+      "minimumOrderQuantity": 44,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.620Z",
+        "updatedAt": "2024-05-23T08:56:21.620Z",
+        "barcode": "2517819903837",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6806f49579180591c83a2308"
+  },
+  "firstName": "isalut",
+  "lastName": "mar",
+  "DOB": "2025-04-22",
+  "gender": "Male",
+  "address": [
+    {
+      "flatNo": "124",
+      "apartment": "Lokesh apartment",
+      "street": "Gurunanak colony",
+      "city": "Vijayawada",
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "pincode": "520008",
+      "landmark": "",
+      "addressType": "home"
+    }
+  ],
+  "mail": "fsd@gmail.com",
+  "phone": "0000000000",
+  "password": "12345",
+  "cart": [],
+  "orders": [
+    {
+      "orderDate": "2025-04-22",
+      "products": [
+        {
+          "quantity": 1,
+          "product": {
+            "id": 84,
+            "title": "Gigabyte Aorus Men Tshirt",
+            "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+            "category": "mens-shirts",
+            "price": 24.99,
+            "discountPercentage": 12.6,
+            "rating": 4.95,
+            "stock": 64,
+            "tags": [
+              "clothing",
+              "men's t-shirts"
+            ],
+            "brand": "Gigabyte",
+            "sku": "QA703Y60",
+            "weight": 2,
+            "dimensions": {
+              "width": 8.54,
+              "height": 23.52,
+              "depth": 5.66
+            },
+            "warrantyInformation": "1 month warranty",
+            "shippingInformation": "Ships in 1 week",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 4,
+                "comment": "Highly recommended!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Logan Lawson",
+                "reviewerEmail": "logan.lawson@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Logan Lawson",
+                "reviewerEmail": "logan.lawson@x.dummyjson.com"
+              },
+              {
+                "rating": 5,
+                "comment": "Great value for money!",
+                "date": "2024-05-23T08:56:21.623Z",
+                "reviewerName": "Oscar Powers",
+                "reviewerEmail": "oscar.powers@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "30 days return policy",
+            "minimumOrderQuantity": 4,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.623Z",
+              "updatedAt": "2024-05-23T08:56:21.623Z",
+              "barcode": "3072645939073",
+              "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+              "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+          }
+        }
+      ],
+      "totalPrice": 29.99
+    }
+  ],
+  "wishlist": []
+},
+{
+  "_id": {
+    "$oid": "680b45089dde6a2463265c1e"
+  },
+  "firstName": "chaitanya",
+  "lastName": "venkat",
+  "DOB": "2024-12-30",
+  "gender": "Male",
+  "address": [],
+  "mail": "chaitanya25@gmail.com",
+  "phone": "9703212493",
+  "password": "Chaitu2465.",
+  "cart": [
+    {
+      "quantity": 2,
+      "product": {
+        "id": 85,
+        "title": "Man Plaid Shirt",
+        "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+        "category": "mens-shirts",
+        "price": 34.99,
+        "discountPercentage": 17.53,
+        "rating": 3.66,
+        "stock": 65,
+        "tags": [
+          "clothing",
+          "men's shirts"
+        ],
+        "brand": "Classic Wear",
+        "sku": "TWL7HRBB",
+        "weight": 1,
+        "dimensions": {
+          "width": 29.56,
+          "height": 29.84,
+          "depth": 7.77
+        },
+        "warrantyInformation": "Lifetime warranty",
+        "shippingInformation": "Ships in 1 week",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 3,
+            "comment": "Would not buy again!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Nora Mills",
+            "reviewerEmail": "nora.mills@x.dummyjson.com"
+          },
+          {
+            "rating": 1,
+            "comment": "Very disappointed!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Addison Ward",
+            "reviewerEmail": "addison.ward@x.dummyjson.com"
+          },
+          {
+            "rating": 4,
+            "comment": "Awesome product!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Emily Brown",
+            "reviewerEmail": "emily.brown@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.623Z",
+          "updatedAt": "2024-05-23T08:56:21.623Z",
+          "barcode": "9383795178668",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+          "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
+      }
+    }
+  ],
+  "orders": [],
+  "wishlist": [
+    {
+      "id": 85,
+      "title": "Man Plaid Shirt",
+      "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+      "category": "mens-shirts",
+      "price": 34.99,
+      "discountPercentage": 17.53,
+      "rating": 3.66,
+      "stock": 65,
+      "tags": [
+        "clothing",
+        "men's shirts"
+      ],
+      "brand": "Classic Wear",
+      "sku": "TWL7HRBB",
+      "weight": 1,
+      "dimensions": {
+        "width": 29.56,
+        "height": 29.84,
+        "depth": 7.77
+      },
+      "warrantyInformation": "Lifetime warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 3,
+          "comment": "Would not buy again!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Nora Mills",
+          "reviewerEmail": "nora.mills@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Addison Ward",
+          "reviewerEmail": "addison.ward@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Emily Brown",
+          "reviewerEmail": "emily.brown@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "9383795178668",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
+    }
+  ]
+}]

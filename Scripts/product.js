@@ -1,4 +1,3 @@
-const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
 
 const params = new URLSearchParams(window.location.search);
 const searchValue = params.get("title");

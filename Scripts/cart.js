@@ -1,10 +1,3 @@
-// ------------------------------
-// ✅ Cleaned Cart Page Script
-// ------------------------------
-
-// ===== Constants and Configuration =====
-const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
-
 // ===== Utility Functions =====
 function getCookie(name) {
   const value = `; ${document.cookie}`;

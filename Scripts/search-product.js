@@ -1,6 +1,3 @@
-// const apiUrl = mongo_api;
-const apiUrl = 'https://qn3tesot21.execute-api.ap-south-1.amazonaws.com/E-Commerce';
-
 // Cookie Helper
 function getCookie(name) {
     const value = `; ${document.cookie}`;
